@@ -1,0 +1,23 @@
+.indicator{
+    color: white;
+    display: flex;
+    margin-top: 70px;
+}
+
+.circle {
+    width: 8px;
+    height: 8px;
+    border-radius: 10em;
+    backdrop-filter: blur(5px);
+    margin-right: 5px;
+    transition: background-color 0.3s ease-in-out, width 0.3s ease-in-out;
+}
+
+.empty-circle {
+    background-color: #dbdbdb76;
+}
+
+.filled-circle {
+    background-color: #ffffff;
+    width: 16px;
+}

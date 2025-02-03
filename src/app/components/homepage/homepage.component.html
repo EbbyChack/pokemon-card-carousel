@@ -1,0 +1,9 @@
+<div class="homepage">
+  <app-card
+    [imageSrc]="cardImageList[currentImageIndex]"
+    [animationClass]="animationClass"
+    (swipeleft)="previousImage()"
+    (swiperight)="nextImage()"
+  ></app-card>
+  <app-indicator [cardImageList]="cardImageList" [currentImage]="currentImageIndex"></app-indicator>
+</div>

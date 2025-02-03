@@ -1,0 +1,75 @@
+:root {
+  --animation-duration: 0.5s;
+}
+.card {
+  border-radius: 20px;
+  width: 25em;
+  -webkit-user-drag: none; /* Chrome */
+  pointer-events: none;
+}
+
+.card-container {
+  border-radius: 20px;
+  cursor: grab;
+}
+.card-container:active {
+  cursor: grabbing;
+}
+.move-left {
+  animation: move-left var(--animation-duration) ease-in;
+  opacity: 0;
+}
+.move-right {
+  animation: move-right var(--animation-duration) ease-in;
+  opacity: 0;
+}
+.move-in-from-left {
+  animation: move-in-from-left var(--animation-duration) ease-in reverse;
+}
+.move-in-from-right {
+  animation: move-in-from-right var(--animation-duration) ease-in reverse;
+}
+
+@keyframes move-left {
+  0% {
+    transform: translateX(-110px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-1000px) rotate(-30deg);
+    opacity: 1;
+  }
+}
+
+@keyframes move-right {
+  0% {
+    transform: translateX(110px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(1000px) rotate(30deg);
+    opacity: 1;
+  }
+}
+
+@keyframes move-in-from-left {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-1000px) rotate(-30deg);
+    opacity: 1;
+  }
+}
+
+@keyframes move-in-from-right {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(1000px) rotate(30deg);
+    opacity: 1;
+  }
+}

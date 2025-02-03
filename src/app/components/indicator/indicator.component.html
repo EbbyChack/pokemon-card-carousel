@@ -1,0 +1,5 @@
+<div class="indicator">
+    <div *ngFor="let cardImage of cardImageList; let i = index">
+      <div class="circle" [ngClass]="{'filled-circle': i === currentImage, 'empty-circle': i !== currentImage}"></div>
+    </div>
+  </div>
