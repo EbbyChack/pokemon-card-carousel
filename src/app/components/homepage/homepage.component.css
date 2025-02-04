@@ -5,24 +5,8 @@
     justify-content: center;
     overflow: hidden;
     height: 100vh;
-    background-color: #282828;
-}
-.arrow-btn{
-    background: rgba(107, 107, 107, 0.28);
-    backdrop-filter: blur(10px);
-    border-radius: 50%;
-    padding: 15px 23px;
-    border: none;
-    color: white;
-    font-size: 2em;
-    font-weight: 100;
-    transition: all 0.3s;
-    z-index: 2;
+    background-color: #ffffff;
 }
 
-.arrow-btn:hover{
-    background: rgba(107, 107, 107, 0.5);
-    cursor: pointer;
-}
 
 
