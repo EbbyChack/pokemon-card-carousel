@@ -1,9 +1,21 @@
+<video autoplay muted loop [playbackRate]="'0.8'" id="bgVideo">
+  <source src="../../../assets/215697_medium.mp4" type="video/mp4" />
+</video>
 <div class="homepage">
-  <app-card
-    [imageSrc]="cardImageList[currentImageIndex]"
-    [animationClass]="animationClass"
-    (swipeleft)="previousImage()"
-    (swiperight)="nextImage()"
-  ></app-card>
-  <app-indicator [cardImageList]="cardImageList" [currentImage]="currentImageIndex"></app-indicator>
+  <div class="all-cards">
+    <app-card
+      [imageSrc]="cardImageList[currentImageIndex]"
+      [animationClass]="animationClass"
+      (swiperight)="nextImage()"
+    ></app-card>
+
+    <app-card-stack
+      [cardImageList]="cardImageList"
+      [currentImage]="currentImageIndex"
+    ></app-card-stack>
+  </div>
+  <app-indicator
+    [cardImageList]="cardImageList"
+    [currentImage]="currentImageIndex"
+  ></app-indicator>
 </div>

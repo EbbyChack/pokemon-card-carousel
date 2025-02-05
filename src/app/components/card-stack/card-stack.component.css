@@ -1,0 +1,36 @@
+.stack-card {
+  border-radius: 20px;
+  width: 20em;
+  -webkit-user-drag: none;
+  box-shadow:3px 3px 3px 1px rgba(0, 0, 0, 0.633);
+}
+
+.card-stack-item {
+  transition: transform 0.3s ease-in-out;
+}
+
+.card-stack-item:nth-child(1) {
+  transform: rotate(var(--rotate-1)) translate(var(--translate-x-1), 0px);
+}
+
+.card-stack-item:nth-child(2) {
+  transform: rotate(var(--rotate-2)) translate(var(--translate-x-2), 0px);
+}
+
+.card-stack-item:nth-child(3) {
+  transform: rotate(var(--rotate-3)) translate(var(--translate-x-3), 0px);
+}
+
+.card-stack-item:nth-child(4) {
+  transform: rotate(var(--rotate-4)) translate(var(--translate-x-4), 0px);
+}
+
+.card-stack-container {
+  position: relative;
+}
+
+.card-stack-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+}

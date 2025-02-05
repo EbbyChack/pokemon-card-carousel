@@ -1,0 +1,9 @@
+<div class="card-stack-container">
+  <div
+    *ngFor="let card of newCardList; let i = index"
+    class="card-stack-item"
+    [style.zIndex]="newCardList.length - i"
+  >
+    <img [src]="card" alt="pokemon card" class="stack-card" draggable="false" />
+  </div>
+</div>

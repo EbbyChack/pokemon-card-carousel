@@ -25,20 +25,35 @@ export class CardComponent implements OnInit {
   ngOnInit() {
     this.hammerManager = new Hammer.Manager(this.el.nativeElement);
     this.hammerManager.add(
-      new Hammer.Pan({ direction: Hammer.DIRECTION_HORIZONTAL, threshold: 0 })
+      new Hammer.Pan({ direction: Hammer.DIRECTION_ALL, threshold: 0 })
     );
 
     this.hammerManager.on('pan', (event) => {
-      const rotation = event.deltaX / 15; 
+      const rotation = event.deltaX / 15;
       this.renderer.setStyle(
         this.el.nativeElement,
         'transform',
-        `translate(${event.deltaX}px, ${event.deltaY / 5}px) rotate(${rotation}deg)`
+        `translate(${event.deltaX}px, ${
+          event.deltaY / 5
+        }px) rotate(${rotation}deg)`
       );
+
+      this.el.nativeElement.style.setProperty(
+        '--translate-x-start',
+        `${event.deltaX}px`
+      )
+      this.el.nativeElement.style.setProperty(
+        '--rotation',
+        `${rotation}deg`
+      )
     });
 
     this.hammerManager.on('panend', () => {
-      this.renderer.setStyle(this.el.nativeElement, 'transform', 'translate(0, 0)');
+      this.renderer.setStyle(
+        this.el.nativeElement,
+        'transform',
+        'translate(0, 0)'
+      );
     });
   }
 }
