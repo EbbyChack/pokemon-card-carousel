@@ -41,11 +41,11 @@ export class CardComponent implements OnInit {
       this.el.nativeElement.style.setProperty(
         '--translate-x-start',
         `${event.deltaX}px`
-      )
+      );
       this.el.nativeElement.style.setProperty(
         '--rotation',
-        `${rotation}deg`
-      )
+        `${rotation > 30 ? 30 : rotation}deg`
+      );
     });
 
     this.hammerManager.on('panend', () => {
